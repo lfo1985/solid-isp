@@ -1,6 +1,6 @@
 {
     "name": "lfo19/app",
-    "description": "Projeto de estudo de SOLID (LSP)",
+    "description": "Projeto de estudo de SOLID (ISP)",
     "type": "project",
     "autoload": {
         "psr-4": {
