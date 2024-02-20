@@ -9,9 +9,16 @@ use App\Modelos\Cliente;
 class ClienteRepositorio implements ICadastro, IEmail
 {
 
+    private $cliente;
+
+    function __construct(Cliente $cliente)
+    {
+        $this->cliente = $cliente;
+    }
+
     public function save(): object
     {
-        return new Cliente;
+        return $this->cliente;
     }
 
     public function delete(object $model): bool
@@ -21,12 +28,12 @@ class ClienteRepositorio implements ICadastro, IEmail
 
     public function update(object $model): object
     {
-        return new Cliente;
+        return $this->cliente;
     }
 
     public function edit(int $id): object
     {
-        return new Cliente;
+        return $this->cliente;
     }
 
     public function all(): array
@@ -36,7 +43,7 @@ class ClienteRepositorio implements ICadastro, IEmail
 
     public function find(int $id): object
     {
-        return new Cliente;
+        return $this->cliente;
     }
 
     public function enviarEmail(string $nome, string $email): bool
